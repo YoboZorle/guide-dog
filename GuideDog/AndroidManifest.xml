@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hack.guidedog"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+    
+    <uses-feature android:name="android.hardware.sensor.accelerometer"
+              android:required="true" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <meta-data 
+           android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
+
+        <service android:name="com.hack.guidedog.MainService" />
+
+        <receiver android:name="com.hack.guidedog.Monitor" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.hack.guidedog.SecondActivity"
+            android:label="@string/title_activity_second" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.call.PhoneActivity"
+            android:label="@string/title_activity_phone" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.msg.MessageActivity"
+            android:label="@string/title_activity_message" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.email.EmailActivity"
+            android:label="@string/title_activity_email" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.email.MailActivity"
+            android:label="@string/title_activity_mail" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.SearchResults"
+            android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.alarm.AlarmActivity"
+            android:label="@string/title_activity_alarm" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.NFC.NFCActivity"
+            android:label="@string/title_activity_nfc" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.ocr.OCRActivity"
+            android:label="@string/title_activity_ocr" >
+        </activity>
+        <activity android:name="com.hack.guidedog.ocr.CameraShot" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.CameraShotActivity"
+            android:label="@string/title_activity_camera_shot" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.settings.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity android:name="com.hack.guidedog.face.FaceDetectionActivity" >
+        </activity>
+        <activity
+            android:name="com.hack.guidedog.SplashScreenActivity"
+            android:label="@string/title_activity_splash_screen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MainActivity"></activity>
+        <activity android:name=".utilities.CalculatorActivity"></activity>
+        <activity android:name=".utilities.MapsActivity"></activity>
+        <activity android:name=".utilities.Mp3PlayerActivity"></activity>
+        
+        <activity android:name=".utilities.UtilityActivity"></activity>
+        <activity android:name=".call.PhoneActivity1"></activity>
+        <activity android:name=".msg.MessageActivity1"></activity>
+        
+    </application>
+</manifest>
