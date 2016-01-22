@@ -1,0 +1,83 @@
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+      
+    	
+      
+  		<ImageView
+            android:id="@+id/button1"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+            android:src="@drawable/braille"  
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/button2"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            
+            android:layout_toRightOf = "@id/button1"
+            android:src="@drawable/braille"  
+            android:scaleType="center"
+            />
+        <ImageView
+            android:id="@+id/button3"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_below = "@id/button1"
+            
+            android:src="@drawable/braille"  
+            android:scaleType="center" />
+        
+        <ImageView
+            android:id="@+id/button4"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_below = "@id/button2"
+            android:layout_toRightOf = "@id/button3"
+            android:src="@drawable/braille"  
+            android:scaleType="center"/>
+        
+        <ImageView
+            android:id="@+id/button5"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_below = "@id/button3"
+            
+           android:src="@drawable/braille"  
+            android:scaleType="center"/>
+        
+        <ImageView
+            android:id="@+id/button6"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_below = "@id/button4"
+            android:layout_toRightOf = "@id/button5"
+            android:src="@drawable/braille"  
+            android:scaleType="center" />
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="240dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:hint="Entered Number"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageView
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf = "@id/textView1"
+            android:src="@drawable/call"  />
+        
+   
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   	android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".UtilityActivity" >
+   
+     
+       
+	<ImageView
+	       android:id="@+id/central"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerInParent="true"
+	       android:padding="30dp"
+	       android:src="@drawable/central"
+	       /> 
+	
+	<ImageView
+	     android:id="@+id/alarm"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:src="@drawable/alarm"
+	     android:layout_above="@id/central"
+ 	     android:paddingRight="30dp"
+   	     android:paddingLeft="30dp"
+   	     android:paddingBottom="20dp"
+	     android:layout_centerHorizontal="true"/>
+	
+	<ImageView
+	       android:id="@+id/mpplayer"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_toLeftOf="@id/central"
+	       android:layout_centerVertical="true"
+	       android:paddingRight="20dp"
+	       android:src="@drawable/mp"/> 
+	       
+	<ImageView
+	       android:id="@+id/calculator"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_toRightOf="@id/central"
+	       android:layout_centerVertical="true"
+	       android:paddingLeft="20dp"
+	       android:src="@drawable/calc"/> 
+	       
+	<ImageView
+	       android:id="@+id/maps"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_below="@id/central"
+	       android:layout_centerHorizontal="true"
+	       android:paddingRight="30dp"
+   	       android:paddingLeft="30dp"
+   	       android:paddingTop="20dp"
+	       android:src="@drawable/map"/> 
+	
+	
+	       
+
+</RelativeLayout>
